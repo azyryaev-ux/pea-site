@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Pea</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #F5F2EB;
+      --green-dark: #2D5A3D;
+      --green-mid: #4A7C59;
+      --green-light: #7BAE8A;
+      --text-primary: #1C1C1C;
+      --text-secondary: #4A4A4A;
+      --text-muted: #6B6B6B;
+      --border: #D8D3C8;
+      --white: #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--text-primary);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    .nav-logo .emoji { font-size: 22px; line-height: 1; }
+    .nav-logo .wordmark {
+      font-family: 'Instrument Serif', serif;
+      font-size: 20px;
+      color: var(--green-dark);
+    }
+    .nav-link {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+    .nav-link:hover { color: var(--green-mid); }
+
+    .hero {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: #EAF3E6;
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 400;
+      color: var(--green-dark);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      color: var(--text-secondary);
+      font-size: 16px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .hero-meta {
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+    .toc-title {
+      font-family: 'Instrument Serif', serif;
+      font-size: 18px;
+      color: var(--green-dark);
+      margin-bottom: 16px;
+    }
+    .toc ol { padding-left: 20px; }
+    .toc li { margin-bottom: 6px; }
+    .toc a {
+      color: var(--green-mid);
+      text-decoration: none;
+      font-size: 15px;
+    }
+    .toc a:hover { text-decoration: underline; }
+
+    .section {
+      margin-bottom: 56px;
+      scroll-margin-top: 80px;
+    }
+    .section h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--green-dark);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section h3 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 19px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin: 28px 0 12px;
+    }
+    .section p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .section ul, .section ol {
+      color: var(--text-secondary);
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    .section li { margin-bottom: 8px; }
+    .section a {
+      color: var(--green-mid);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .highlight {
+      background: #EAF3E6;
+      border-left: 3px solid var(--green-mid);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      color: var(--green-dark);
+      font-size: 15px;
+    }
+
+    .warning {
+      background: #FEF3E2;
+      border-left: 3px solid #E67E22;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      color: #7A4200;
+      font-size: 15px;
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .pricing-table th {
+      background: var(--green-dark);
+      color: var(--white);
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .pricing-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-secondary);
+    }
+    .pricing-table tr:last-child td { border-bottom: none; }
+    .pricing-table tr:nth-child(even) td { background: rgba(245,242,235,0.6); }
+
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-top: 20px;
+    }
+    .contact-card p { margin-bottom: 8px; }
+    .contact-card a { color: var(--green-mid); }
+
+    footer {
+      background: var(--green-dark);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 14px;
+    }
+    footer .footer-logo {
+      font-family: 'Instrument Serif', serif;
+      font-size: 22px;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: underline; }
+    footer a:hover { color: var(--white); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="https://azyryaev-ux.github.io/pea-site" class="nav-logo">
+        <span class="emoji">🫛</span>
+        <span class="wordmark">Pea</span>
+      </a>
+      <a href="privacy.html" class="nav-link">Privacy Policy →</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-badge">Legal</div>
+    <h1>Terms of Service</h1>
+    <p>The rules and conditions for using Pea – Clean Eating Scanner.</p>
+    <div class="hero-meta">Last updated: March 28, 2025 &nbsp;·&nbsp; Effective: March 28, 2025</div>
+  </div>
+
+  <div class="content">
+
+    <div class="toc">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#acceptance">Acceptance of Terms</a></li>
+        <li><a href="#description">Description of Service</a></li>
+        <li><a href="#accounts">Accounts and Registration</a></li>
+        <li><a href="#subscriptions">Subscriptions and Billing</a></li>
+        <li><a href="#free-tier">Free Tier Limitations</a></li>
+        <li><a href="#acceptable-use">Acceptable Use</a></li>
+        <li><a href="#user-content">User-Submitted Content</a></li>
+        <li><a href="#disclaimer">Medical Disclaimer</a></li>
+        <li><a href="#intellectual-property">Intellectual Property</a></li>
+        <li><a href="#third-party">Third-Party Services</a></li>
+        <li><a href="#termination">Termination</a></li>
+        <li><a href="#liability">Limitation of Liability</a></li>
+        <li><a href="#governing-law">Governing Law</a></li>
+        <li><a href="#changes">Changes to Terms</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ol>
+    </div>
+
+    <!-- 1 -->
+    <div class="section" id="acceptance">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By downloading, installing, or using Pea – Clean Eating Scanner ("Pea", "the app", "the Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the app.</p>
+      <p>These Terms constitute a legally binding agreement between you and the individual developer operating Pea ("we", "us", or "our"). You must be at least 13 years old to use the app (or 16 in the European Economic Area).</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="section" id="description">
+      <h2>2. Description of Service</h2>
+      <p>Pea is a mobile application that allows users to scan food product barcodes and ingredient labels to receive information about ingredients, additives, and health-related data. The app sources product data from:</p>
+      <ul>
+        <li>Open Food Facts — a community-maintained open database</li>
+        <li>USDA FoodData Central — a US government food database</li>
+        <li>User submissions contributed through the app</li>
+      </ul>
+      <p>Pea is available on iOS and Android devices. Features vary between the free tier and Pea Premium subscription.</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="section" id="accounts">
+      <h2>3. Accounts and Registration</h2>
+      <p>You may use Pea as a guest without creating an account. Guest data is stored only on your device.</p>
+      <p>If you create an account, you agree to:</p>
+      <ul>
+        <li>Provide accurate and complete information</li>
+        <li>Keep your password secure and confidential</li>
+        <li>Notify us immediately of any unauthorised access to your account</li>
+        <li>Take responsibility for all activity that occurs under your account</li>
+      </ul>
+      <p>We reserve the right to suspend or terminate accounts that violate these Terms.</p>
+      <p>You may delete your account at any time from within the app (Settings → Delete Account) or by contacting us. Upon deletion, your personal data will be permanently removed within 30 days.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="section" id="subscriptions">
+      <h2>4. Subscriptions and Billing</h2>
+      <p>Pea offers a Premium subscription that unlocks additional features. Subscription details:</p>
+
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Price</th>
+            <th>Billing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pea Premium — Monthly</td>
+            <td>$4.99 / month</td>
+            <td>Billed monthly, recurring</td>
+          </tr>
+          <tr>
+            <td>Pea Premium — Annual</td>
+            <td>$29.99 / year</td>
+            <td>Billed annually, recurring</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Free trial</h3>
+      <p>We may offer a free trial period for Pea Premium. If you subscribe before the trial ends, the remaining trial period is forfeited and billing begins immediately upon confirmation of purchase.</p>
+
+      <h3>Auto-renewal</h3>
+      <p>Subscriptions automatically renew at the end of each billing period unless cancelled at least 24 hours before the renewal date. Your payment method will be charged through the App Store (iOS) or Google Play (Android).</p>
+
+      <h3>Cancellation</h3>
+      <p>You may cancel your subscription at any time through your App Store or Google Play account settings. Cancellation takes effect at the end of the current billing period. We do not offer refunds for partial subscription periods, except as required by applicable law or as provided by Apple or Google's refund policies.</p>
+
+      <h3>Restoring purchases</h3>
+      <p>If you reinstall the app or switch devices, you can restore your Premium subscription by tapping "Restore Purchases" in the app's Settings. Ensure you are signed in with the same Apple ID or Google account used for the original purchase.</p>
+
+      <h3>Price changes</h3>
+      <p>We reserve the right to change subscription prices. You will be notified of any price change before it takes effect, and your subscription will continue at the current price until the next renewal date.</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="section" id="free-tier">
+      <h2>5. Free Tier Limitations</h2>
+      <p>Free users are entitled to <strong>3 barcode or label scans per day</strong>. The daily limit resets at midnight (local device time). Additional scans beyond the daily limit require a Pea Premium subscription.</p>
+      <p>We reserve the right to adjust the free tier limits at any time with reasonable notice.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="section" id="acceptable-use">
+      <h2>6. Acceptable Use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the app for any unlawful purpose or in violation of any applicable laws</li>
+        <li>Attempt to reverse engineer, decompile, or extract the source code of the app</li>
+        <li>Use automated tools, bots, or scripts to scrape or extract data from the app or its APIs</li>
+        <li>Attempt to bypass, disable, or circumvent subscription limits or premium features</li>
+        <li>Submit false, misleading, or harmful product information to the database</li>
+        <li>Interfere with or disrupt the integrity or performance of the app or its backend services</li>
+        <li>Attempt to gain unauthorised access to any part of the app or its systems</li>
+        <li>Use the app to harm, harass, or defraud other users or third parties</li>
+      </ul>
+    </div>
+
+    <!-- 7 -->
+    <div class="section" id="user-content">
+      <h2>7. User-Submitted Content</h2>
+      <p>When you submit a product to the database (name, brand, barcode, ingredients, photos), you:</p>
+      <ul>
+        <li>Confirm that the information is accurate to the best of your knowledge</li>
+        <li>Grant us a non-exclusive, worldwide, royalty-free licence to use, store, and contribute this information to the Open Food Facts open database</li>
+        <li>Understand that once submitted to Open Food Facts, the data becomes publicly available under an open licence and cannot be deleted by us</li>
+        <li>Confirm that you have the right to submit any photos you provide (e.g. product packaging photos you took yourself)</li>
+      </ul>
+      <p>We reserve the right to review, edit, or remove user-submitted content that is inaccurate, inappropriate, or in violation of these Terms.</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="section" id="disclaimer">
+      <h2>8. Medical Disclaimer</h2>
+      <div class="warning">
+        <strong>Important:</strong> Pea is an informational tool only. Nothing in this app constitutes medical advice, dietary advice, or a recommendation to treat, cure, diagnose, or prevent any health condition or disease.
+      </div>
+      <p>The health scores, ingredient risk ratings, and environmental risk data provided by Pea are based on publicly available information and are intended for general informational purposes only. They should not be relied upon as a substitute for professional medical, nutritional, or dietary advice.</p>
+      <p>Always consult a qualified healthcare professional before making changes to your diet, especially if you have a medical condition, food allergy, or are pregnant or breastfeeding.</p>
+      <p>Product data sourced from Open Food Facts and the USDA is community-maintained and government-provided respectively. While we strive to present accurate information, we cannot guarantee the completeness, accuracy, or currency of any product data. Ingredients and formulations change frequently — always check the physical product label.</p>
+      <p>Users with severe food allergies should not rely solely on Pea to determine whether a product is safe for consumption. Always read the physical product label.</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="section" id="intellectual-property">
+      <h2>9. Intellectual Property</h2>
+      <p>The Pea app, including its name, logo, design, code, and all original content created by us, is owned by the developer and protected by applicable intellectual property laws.</p>
+      <p>Product data sourced from Open Food Facts is available under the <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank">Open Database Licence (ODbL)</a>. USDA FoodData Central data is in the public domain.</p>
+      <p>You may not reproduce, distribute, modify, or create derivative works of any part of the app without our prior written consent.</p>
+    </div>
+
+    <!-- 10 -->
+    <div class="section" id="third-party">
+      <h2>10. Third-Party Services</h2>
+      <p>Pea integrates with third-party services including Open Food Facts, USDA FoodData Central, RevenueCat, Firebase, Apple App Store, and Google Play. Your use of these services through Pea is governed by their respective terms of service and privacy policies.</p>
+      <p>We are not responsible for the practices, policies, or content of third-party services. We do not endorse and are not responsible for the accuracy of any product data provided by Open Food Facts, which is maintained by a third-party community.</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="section" id="termination">
+      <h2>11. Termination</h2>
+      <p>We may suspend or terminate your access to Pea at any time, with or without notice, if you violate these Terms or for any other reason at our sole discretion.</p>
+      <p>You may stop using the app and delete your account at any time. Termination does not entitle you to a refund of any subscription fees paid, except as required by law.</p>
+      <p>Upon termination, your right to use the app ceases immediately. Provisions of these Terms that by their nature should survive termination (including disclaimers, limitation of liability, and intellectual property provisions) will survive.</p>
+    </div>
+
+    <!-- 12 -->
+    <div class="section" id="liability">
+      <h2>12. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by applicable law:</p>
+      <ul>
+        <li>Pea is provided "as is" and "as available" without warranties of any kind, either express or implied</li>
+        <li>We do not warrant that the app will be uninterrupted, error-free, or free of viruses or other harmful components</li>
+        <li>We are not liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the app</li>
+        <li>Our total liability to you for any claims arising from use of the app shall not exceed the amount you paid for the app in the 12 months preceding the claim (or $10 USD if you have not made any payments)</li>
+      </ul>
+      <p>Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability. In such jurisdictions, our liability is limited to the greatest extent permitted by law.</p>
+    </div>
+
+    <!-- 13 -->
+    <div class="section" id="governing-law">
+      <h2>13. Governing Law</h2>
+      <p>These Terms are governed by and construed in accordance with applicable law. Any disputes arising out of or in connection with these Terms shall be resolved through good-faith negotiation. If negotiation is unsuccessful, disputes shall be submitted to the courts of competent jurisdiction.</p>
+      <p>If you are a consumer in the European Union, you may also have the right to refer disputes to an alternative dispute resolution body under EU law.</p>
+    </div>
+
+    <!-- 14 -->
+    <div class="section" id="changes">
+      <h2>14. Changes to Terms</h2>
+      <p>We reserve the right to modify these Terms at any time. When we make material changes, we will update the "Last updated" date at the top of this page and notify you within the app.</p>
+      <p>Your continued use of Pea after changes are posted constitutes acceptance of the updated Terms. If you do not agree to the updated Terms, you must stop using the app and delete your account.</p>
+    </div>
+
+    <!-- 15 -->
+    <div class="section" id="contact">
+      <h2>15. Contact Us</h2>
+      <p>If you have questions about these Terms or the app, please contact us:</p>
+      <div class="contact-card">
+        <p><strong>Pea – Clean Eating Scanner</strong></p>
+        <p>Individual developer</p>
+        <p>Email: <a href="mailto:azyryaev@gmail.com">azyryaev@gmail.com</a></p>
+        <p>Website: <a href="https://azyryaev-ux.github.io/pea-site">https://azyryaev-ux.github.io/pea-site</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-logo">🫛 Pea</div>
+    <p>Eat clean. Feel the difference.</p>
+    <p style="margin-top:16px;">
+      <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp;
+      <a href="mailto:azyryaev@gmail.com">Contact</a>
+    </p>
+    <p style="margin-top:16px; font-size:12px;">© 2025 Pea – Clean Eating Scanner. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
